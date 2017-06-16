@@ -13,6 +13,10 @@ const routes: Routes = [
 		component: UserDetailsComponent,
 	}, 
 	{
+		path: 'users/add', 
+		component: UserDetailsComponent,
+	}, 
+	{
 		path: '',
 		redirectTo: '/users',
 		pathMatch: 'full'

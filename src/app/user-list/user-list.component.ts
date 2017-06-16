@@ -16,6 +16,7 @@ import { UserManagerService } from "../user-manager.service";
                 <li *ngFor="let user of userList">
                     <a [routerLink]="['/users', user._id]">{{user.fullName}} </a>
                 </li>
+                <a [routerLink]="['/users', 'add']">New User </a>
             </ul>
             <!-- HERE: added this error message -->
             <section *ngIf="errorMessage">

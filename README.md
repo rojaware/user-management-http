@@ -10,6 +10,7 @@ Tutorial Sample for User Management Application with Angular 4 Frontend backed b
 3. Start Angular :: On the 'user-management' directory, 
 Run `ng serve --open` for a dev server. 
 4. Test on chrome browser :: enable CORS if you run server and client on same server :: Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+5. Test REST API before calling Node application from Angular :: Add Postman extension to your Chrome browser and enter GET :: localhost:3000/api/users. More details are available on node-rest repository in this GitHub
 
 ## Code scaffolding
 
