@@ -1,4 +1,6 @@
 <section *ngIf="user">
+    <!-- description -->
+  <section>
     <h2>You selected: {{user.fullName}}</h2>
     <h3>Description</h3>
     <p>
@@ -8,7 +10,7 @@
 <section>
     <form (ngSubmit)="saveUserDetails()" #userForm="ngForm">
         <div>
-         <label for="name">Full Name: </label>
+         <label for="fullName">Full Name: </label>
          <input type="text" name="fullName" [(ngModel)]="user.fullName" required #fullName="ngModel">
          <div [hidden]="fullName.valid || fullName.pristine" class="error">
             Full Name is required my good sir/lady!
@@ -33,3 +35,4 @@
     </form>
 </section>
 <button (click)="gotoUserList()">Back to peoples list</button>
+<section>
