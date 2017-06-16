@@ -1,0 +1,35 @@
+<section *ngIf="user">
+    <h2>You selected: {{user.fullName}}</h2>
+    <h3>Description</h3>
+    <p>
+        {{user.fullName}} with {{user.userId}} has {{user.role}} role.
+    </p>
+</section>
+<section>
+    <form (ngSubmit)="saveUserDetails()" #userForm="ngForm">
+        <div>
+         <label for="name">Full Name: </label>
+         <input type="text" name="fullName" [(ngModel)]="user.fullName" required #fullName="ngModel">
+         <div [hidden]="fullName.valid || fullName.pristine" class="error">
+            Full Name is required my good sir/lady!
+         </div>
+        </div>
+        <div>
+            <label for="userId">User ID: </label>
+            <input type="text" name="userId" [(ngModel)]="user.userId" required  #userId="ngModel">
+            <div [hidden]="userId.valid || userId.pristine" class="error">
+            User ID is required my good sir/lady!
+        </div>
+        </div>
+      
+        <div>
+        <label for="role">Role:</label>
+        <select name="role" [(ngModel)]="user.role">
+          <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+        </select>
+      </div>
+
+        <button type="submit" [disabled]="!userForm.form.valid">Save</button>
+    </form>
+</section>
+<button (click)="gotoUserList()">Back to peoples list</button>
