@@ -1,10 +1,15 @@
 # User management http
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
+Tutorial Sample for User Management Application with Angular 4 Frontend backed by ExpressJS and NodeJS on Server side (node-rest project) with MongoDB as database
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Start MongoDB Server :: mongod on any DOS prompt
+2. Start Node on Server :: On the 'node-rest' directory, nodemon server.js
+3. Start Angular :: On the 'user-management' directory, 
+Run `ng serve --open` for a dev server. 
+4. Test on chrome browser :: enable CORS if you run server and client on same server :: Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

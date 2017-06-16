@@ -8,5 +8,5 @@ import { UserManagerService } from './user-manager.service';
 
 })
 export class AppComponent {
-  title = 'PETR User Management Admin';
+  title = ' User Management ';
 }
