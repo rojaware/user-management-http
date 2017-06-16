@@ -1,4 +1,4 @@
-# PetrGetStarted
+# User management http
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
 
@@ -22,6 +22,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+
+## Existing project into GitHub repository
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
 ## Further help
 
