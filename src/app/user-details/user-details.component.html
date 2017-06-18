@@ -1,13 +1,13 @@
-<section *ngIf="user">
+
     <!-- description -->
-  <section>
+  <section *ngIf="user">
     <h2>You selected: {{user.fullName}}</h2>
     <h3>Description</h3>
     <p>
         {{user.fullName}} with {{user.userId}} has {{user.role}} role.
     </p>
 </section>
-<section>
+
     <form (ngSubmit)="saveUserDetails()" #userForm="ngForm">
         <div>
          <label for="fullName">Full Name: </label>
@@ -33,6 +33,5 @@
 
         <button type="submit" [disabled]="!userForm.form.valid">Save</button>
     </form>
-</section>
+
 <button (click)="gotoUserList()">Back to peoples list</button>
-<section>

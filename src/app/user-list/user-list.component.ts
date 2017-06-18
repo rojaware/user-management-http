@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../user';
 import { UserManagerService } from "../user-manager.service";
 
@@ -16,8 +17,9 @@ import { UserManagerService } from "../user-manager.service";
                 <li *ngFor="let user of userList">
                     <a [routerLink]="['/users', user._id]">{{user.fullName}} </a>
                 </li>
-                <a [routerLink]="['/users', 'add']">New User </a>
+                
             </ul>
+            <button (click)="newUser()">Add New</button>
             <!-- HERE: added this error message -->
             <section *ngIf="errorMessage">
                 {{errorMessage}}
@@ -36,7 +38,7 @@ export class UserListComponent implements OnInit {
   errorMessage: string = '';
   isLoading: boolean = true;
 
-  constructor(private userManagerService: UserManagerService) { }
+  constructor(private userManagerService: UserManagerService, private router: Router) { }
 
   ngOnInit() {
     this.userManagerService
@@ -46,5 +48,8 @@ export class UserListComponent implements OnInit {
          /* error path */ e => this.errorMessage = e,
          /* onCompleted */() => this.isLoading = false);
   }
-
+  newUser() {
+     let link = ['/users/:'];
+     this.router.navigate(link);
+   }
 }
